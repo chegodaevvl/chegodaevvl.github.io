@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
-  new SimpleBar(document.querySelector('.genre__submenu'), {
+  new SimpleBar(document.querySelector('.submenu__items'), {
     scrollbarMaxSize: 28
   });
 
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function() {
     },
   });
 
-  $( "#accordion" ).accordion({
+  $( ".accordion" ).accordion({
     heightStyle: "content",
     // collapsible: true,
     icons: null,
@@ -79,5 +79,56 @@ window.addEventListener('DOMContentLoaded', function() {
 
       myMap.geoObjects.add(myPlacemark);
     }
+
+  document.querySelectorAll('.lang__button').forEach(function(tabsBtn) {
+    tabsBtn.addEventListener('click', function(event) {
+      var lang = event.currentTarget.dataset.lang
+      document.querySelectorAll('.lang__button').forEach(function(BtnTabs) {
+        BtnTabs.classList.remove('lang-active')
+      })
+      event.currentTarget.classList.add('lang-active')
+      document.querySelectorAll('[data-trans]').forEach(function(tabContent) {
+        tabContent.classList.remove('trans-active')
+      })
+        document.querySelectorAll(`[data-trans="${lang}"]`).forEach(function(activeElement) {
+          activeElement.classList.add('trans-active')
+        })
+    })
+  })
+
+  document.querySelectorAll('.painter__button').forEach(function(tabsBtn) {
+    tabsBtn.addEventListener('click', function(event) {
+      var painter = event.currentTarget.dataset.painter
+      document.querySelectorAll('.painter__button').forEach(function(BtnTabs) {
+        BtnTabs.classList.remove('tab-active')
+      })
+      event.currentTarget.classList.add('tab-active')
+      document.querySelectorAll('[data-detail]').forEach(function(tabContent) {
+        tabContent.classList.remove('painter-active')
+      })
+        document.querySelectorAll(`[data-detail="${painter}"]`).forEach(function(activeElement) {
+          activeElement.classList.add('painter-active')
+        })
+    })
+  })
+
+  document.querySelector('.event__btn').addEventListener('click', function() {
+    document.querySelectorAll('.events__item').forEach(function(eventTab) {
+      eventTab.classList.remove('is__hidden')
+    })
+    document.querySelector('.event__btn').classList.add('is__hidden')
+  })
+
+  var im = new Inputmask("9{1,2}[ 999]");
+  document.querySelectorAll(".filter__value").forEach(function(numField) {
+    im.mask(numField)
+  })
+
+  tippy('.tool-tip', {
+    content: 'Пример современных тенденций - современная методология разработки',
+    theme: 'main-theme',
+    trigger: 'click',
+    maxWidth: 264,
+  });
 
 })
