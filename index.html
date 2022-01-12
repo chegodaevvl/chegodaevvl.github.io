@@ -28,64 +28,64 @@
   <header class="header">
     <div class="header__body">
       <div class="container header__top-container flex">
-        <button class="btn-reset burger">
+        <button class="btn-reset burger" aria-label="Кнопка раскрытия меню">
           <svg class="btn-icon" width="36" height="27" viewBox="0 0 36 27" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="3" transform="matrix(-1 0 0 1 36 0)" fill="white"/>
             <path d="M28 12H0V15H28V12Z" fill="white"/>
             <path d="M24 24H0V27H24V24Z" fill="white"/>
           </svg>
         </button>
-        <a class="logo" href="#">
+        <a class="logo" href="#" aria-label="Логотип Blanchard">
           <img src="img/logo.svg" alt="Логотип Blanchard">
         </a>
-        <nav class="main-menu">
+        <nav class="main-menu" aria-label="Основное меню сайта">
           <ul class="list-reset flex main-menu__items">
             <li class="main-menu__item">
-              <a class="link-effects" href="#about">О&nbsp;нас</a>
+              <a class="link-effects" href="#about" aria-label="Переход в раздел О нас">О&nbsp;нас</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#gallery">Галерея</a>
+              <a class="link-effects" href="#gallery" aria-label="Переход в раздел Галерея">Галерея</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#catalogue">Каталог</a>
+              <a class="link-effects" href="#catalogue" aria-label="Переход в раздел Каталог">Каталог</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#events">События</a>
+              <a class="link-effects" href="#events" aria-label="Переход в раздел События">События</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#publishes">Издания</a>
+              <a class="link-effects" href="#publishes" aria-label="Переход в раздел Издания">Издания</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#projects">Проекты</a>
+              <a class="link-effects" href="#projects" aria-label="Переход в раздел Проекты">Проекты</a>
             </li>
             <li class="main-menu__item">
-              <a class="link-effects" href="#contacts">Контакты</a>
+              <a class="link-effects" href="#contacts" aria-label="Переход в раздел Контакты">Контакты</a>
             </li>
           </ul>
         </nav>
-        <a class="login link-effects" href="#">
-          <svg class="login__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a class="login link-effects" href="#" aria-label="Переход на страницу входа">
+          <svg class="login-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
           </svg>
           Войти
         </a>
-        <button class="btn-reset search-open">
-          <svg class="btn-icon search__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="btn-reset search-open" aria-label="Кнопка открытия формы поиска по сайту">
+          <svg class="btn-icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)" fill="white"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
           </svg>
         </button>
         <div class="search">
-          <form action="/" class="search-form flex">
-            <button class="btn-reset search-form__submit">
+          <form class="search-form flex" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+            <button class="btn-reset search-form__submit" aria-label="Кнопка отправки поискового запроса">
               <svg class="btn-icon search-form__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
               </svg>
             </button>
-            <input type="text" class="search-form__field">
+            <input class="search-form__field" type="text" name="search-value" aria-label="Строка для ввода поисковых значений">
           </form>
-          <button class="btn-reset search__close">
+          <button class="btn-reset search__close" aria-label="Кнопка закрытия формы поиска">
             <svg class="btn-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
               <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
@@ -95,10 +95,10 @@
       </div>
       <div class="header__bottom-container">
         <div class="container bottom-container flex">
-          <nav class="genres-menu">
+          <nav class="genres-menu" aria-label="Навигация по жанрам произведений">
             <ul class="list-reset genres-menu__items flex">
               <li class="genres-menu__item">
-                <button class="btn-reset genres-menu__button link-effects flex">
+                <button class="btn-reset genres-menu__button link-effects flex" aria-label="Жанр реализм">
                   <span class="btn-title">
                     Реализм
                   </span>
@@ -106,37 +106,37 @@
                     <path d="M11 1L6 6L1 1" stroke="white"/>
                   </svg>
                 </button>
-                <div class="submenu">
+                <div class="submenu" aria-label="Основные творцы жанра реализм">
                   <ul class="list-reset submenu__items simple">
                     <li class="submenu__item tabindex='0' submenu__item_bg-1">
-                      <a class="submenu__link flex" href="#1">Тинторетто</a>
+                      <a class="submenu__link flex" href="#1" aria-label="Тинторетто">Тинторетто</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-2">
-                      <a class="submenu__link" href="#1">Фридрих</a>
+                      <a class="submenu__link" href="#1" aria-label="Фридрих">Фридрих</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-3">
-                      <a class="submenu__link" href="#1">Леонардо</a>
+                      <a class="submenu__link" href="#1" aria-label="Леонардо">Леонардо</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-4">
-                      <a class="submenu__link" href="#1">Верроккьо</a>
+                      <a class="submenu__link" href="#1" aria-label="Верроккьо">Верроккьо</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-1">
-                      <a class="submenu__link" href="#1">Тинторетто</a>
+                      <a class="submenu__link" href="#1" aria-label="Тинторетто">Тинторетто</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-2">
-                      <a class="submenu__link" href="#1">Фридрих</a>
+                      <a class="submenu__link" href="#1" aria-label="Фридрих">Фридрих</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-3">
-                      <a class="submenu__link" href="#1">Леонардо</a>
+                      <a class="submenu__link" href="#1" aria-label="Леонардо">Леонардо</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-4">
-                      <a class="submenu__link" href="#1">Верроккьо</a>
+                      <a class="submenu__link" href="#1" aria-label="Верроккьо">Верроккьо</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="genres-menu__item">
-                <button class="btn-reset genres-menu__button link-effects flex">
+                <button class="btn-reset genres-menu__button link-effects flex" aria-label="Жанр импрессионизм">
                   <span class="btn-title">
                     Импрессионизм
                   </span>
@@ -144,37 +144,37 @@
                     <path d="M11 1L6 6L1 1" stroke="white"/>
                   </svg>
                 </button>
-                <div class="submenu">
+                <div class="submenu" aria-label="Основные творцы жанра импрессионизм">
                   <ul class="list-reset submenu__items simple">
                     <li class="submenu__item submenu__item_bg-5">
-                      <a class="submenu__link " href="#1">Моне</a>
+                      <a class="submenu__link " href="#1" aria-label="Моне">Моне</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-6">
-                      <a class="submenu__link" href="#1">Сислей</a>
+                      <a class="submenu__link" href="#1" aria-label="Сислей">Сислей</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-7">
-                      <a class="submenu__link" href="#1">Мане</a>
+                      <a class="submenu__link" href="#1" aria-label="Мане">Мане</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-8">
-                      <a class="submenu__link" href="#1">Ренуар</a>
+                      <a class="submenu__link" href="#1" aria-label="Ренуар">Ренуар</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-5">
-                      <a class="submenu__link" href="#1">Моне</a>
+                      <a class="submenu__link" href="#1" aria-label="Моне">Моне</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-6">
-                      <a class="submenu__link" href="#1">Сислей</a>
+                      <a class="submenu__link" href="#1" aria-label="Сислей">Сислей</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-7">
-                      <a class="submenu__link" href="#1">Мане</a>
+                      <a class="submenu__link" href="#1" aria-label="Мане">Мане</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-8">
-                      <a class="submenu__link" href="#1">Ренуар</a>
+                      <a class="submenu__link" href="#1" aria-label="Ренуар">Ренуар</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="genres-menu__item">
-                <button class="btn-reset genres-menu__button link-effects flex">
+                <button class="btn-reset genres-menu__button link-effects flex" aria-label="Жанр постимпрессионизм">
                   <span class="btn-title">
                     Постимпрессионизм
                   </span>
@@ -182,37 +182,37 @@
                     <path d="M11 1L6 6L1 1" stroke="white"/>
                   </svg>
                 </button>
-                <div class="submenu">
+                <div class="submenu" aria-label="Основные творцы жанра постимпрессионизм">
                   <ul class="list-reset submenu__items">
                     <li class="submenu__item submenu__item_bg-9">
-                      <a class="submenu__link " href="#1">Ван Гог</a>
+                      <a class="submenu__link " href="#1" aria-label="Ван Гог">Ван Гог</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-10">
-                      <a class="submenu__link" href="#1">Сезанн</a>
+                      <a class="submenu__link" href="#1" aria-label="Сезанн">Сезанн</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-11">
-                      <a class="submenu__link" href="#1">Гоген</a>
+                      <a class="submenu__link" href="#1" aria-label="Гоген">Гоген</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-12">
-                      <a class="submenu__link" href="#1">Сёра</a>
+                      <a class="submenu__link" href="#1" aria-label="Сёра">Сёра</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-9">
-                      <a class="submenu__link" href="#1">Ван Гог</a>
+                      <a class="submenu__link" href="#1" aria-label="Ван Гог">Ван Гог</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-10">
-                      <a class="submenu__link" href="#1">Сезанн</a>
+                      <a class="submenu__link" href="#1" aria-label="Сезанн">Сезанн</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-11">
-                      <a class="submenu__link" href="#1">Гоген</a>
+                      <a class="submenu__link" href="#1" aria-label="Гоген">Гоген</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-12">
-                      <a class="submenu__link" href="#1">Сёра</a>
+                      <a class="submenu__link" href="#1" aria-label="Сёра">Сёра</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="genres-menu__item">
-                <button class="btn-reset genres-menu__button link-effects flex">
+                <button class="btn-reset genres-menu__button link-effects flex" aria-label="Жанр авангард">
                   <span class="btn-title">
                     Авангард
                   </span>
@@ -220,37 +220,37 @@
                     <path d="M11 1L6 6L1 1" stroke="white"/>
                   </svg>
                 </button>
-                <div class="submenu">
+                <div class="submenu" aria-label="Основные творцы жанра авангард">
                   <ul class="list-reset submenu__items">
                     <li class="submenu__item submenu__item_bg-13">
-                      <a class="submenu__link " href="#1">Кандинский</a>
+                      <a class="submenu__link " href="#1" aria-label="Кандинский">Кандинский</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-14">
-                      <a class="submenu__link" href="#1">Маринетти</a>
+                      <a class="submenu__link" href="#1" aria-label="Маринетти">Маринетти</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-15">
-                      <a class="submenu__link" href="#1">Малевич</a>
+                      <a class="submenu__link" href="#1" aria-label="Малевич">Малевич</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-16">
-                      <a class="submenu__link" href="#1">Пикассо</a>
+                      <a class="submenu__link" href="#1" aria-label="Пикассо">Пикассо</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-13">
-                      <a class="submenu__link" href="#1">Кандинский</a>
+                      <a class="submenu__link" href="#1" aria-label="Кандинский">Кандинский</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-14">
-                      <a class="submenu__link" href="#1">Маринетти</a>
+                      <a class="submenu__link" href="#1" aria-label="Маринетти">Маринетти</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-15">
-                      <a class="submenu__link" href="#1">Малевич</a>
+                      <a class="submenu__link" href="#1" aria-label="Малевич">Малевич</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-16">
-                      <a class="submenu__link" href="#1">Пикассо</a>
+                      <a class="submenu__link" href="#1" aria-label="Пикассо">Пикассо</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="genres-menu__item">
-                <button class="btn-reset genres-menu__button link-effects flex">
+                <button class="btn-reset genres-menu__button link-effects flex" aria-label="Жанр футуризм">
                   <span class="btn-title">
                     Футуризм
                   </span>
@@ -258,45 +258,45 @@
                     <path d="M11 1L6 6L1 1" stroke="white"/>
                   </svg>
                 </button>
-                <div class="submenu">
+                <div class="submenu" aria-label="Основные творцы жанра футуризм">
                   <ul class="list-reset submenu__items">
                     <li class="submenu__item submenu__item_bg-17">
-                      <a class="submenu__link " href="#1">Карра</a>
+                      <a class="submenu__link " href="#1" aria-label="Карра">Карра</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-18">
-                      <a class="submenu__link" href="#1">Прателла</a>
+                      <a class="submenu__link" href="#1" aria-label="Прателла">Прателла</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-19">
-                      <a class="submenu__link" href="#1">Северини</a>
+                      <a class="submenu__link" href="#1" aria-label="Северини">Северини</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-20">
-                      <a class="submenu__link" href="#1">Балла</a>
+                      <a class="submenu__link" href="#1" aria-label="Балла">Балла</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-17">
-                      <a class="submenu__link" href="#1">Карра</a>
+                      <a class="submenu__link" href="#1" aria-label="Карра">Карра</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-18">
-                      <a class="submenu__link" href="#1">Прателла</a>
+                      <a class="submenu__link" href="#1" aria-label="Прателла">Прателла</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-19">
-                      <a class="submenu__link" href="#1">Северини</a>
+                      <a class="submenu__link" href="#1" aria-label="Северини">Северини</a>
                     </li>
                     <li class="submenu__item submenu__item_bg-20">
-                      <a class="submenu__link" href="#1">Балла</a>
+                      <a class="submenu__link" href="#1" aria-label="Балла">Балла</a>
                     </li>
                   </ul>
                 </div>
               </li>
             </ul>
           </nav>
-          <form action="/" class="search-form flex">
-            <button class="btn-reset search-form__submit">
+          <form class="search-form flex" action="https://jsonplaceholder.typicode.com/posts" method="POST" aria-label="Фома поиска по сайту">
+            <button class="btn-reset search-form__submit" aria-label="Кнопка отправки запроса">
               <svg class="btn-icon search-form__icon" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6533)" fill="white"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
               </svg>
             </button>
-            <input type="text" class="search-form__field" placeholder="Поиск по сайту">
+            <input type="text" class="search-form__field" name="search-value" placeholder="Поиск по сайту">
           </form>
         </div>
       </div>
@@ -317,17 +317,15 @@
           <p class="hero__description">
             Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
           </p>
-          <button class="btn-reset hero__btn btn-effects">
-            <a class="contact-link" href="#contacts">
-              Подписаться на&nbsp;рассылку
-            </a>
+          <button class="btn-reset hero__btn btn-effects" aria-label="Кнопка для перехода к форме подписки на новостную рассылку">
+            Подписаться на&nbsp;рассылку
           </button>
         </div>
       </div>
     </div>
-    <div class="burger-menu">
+    <div class="burger-menu" aria-label="Навигационное меню">
       <div class="burger-menu__title">
-        <button class="btn-reset burger-menu__close">
+        <button class="btn-reset burger-menu__close" aria-label="Кнопка закрытия меню">
           <svg class="btn-icon" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white"/>
             <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white"/>
@@ -336,29 +334,29 @@
       </div>
       <ul class="list-reset burger-menu__items">
         <li class="burger-menu__item">
-          <a href="#about" class="link-effects">О&nbsp;нас</a>
+          <a href="#about" class="link-effects" aria-label="Переход в раздел О нас">О&nbsp;нас</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#gallery" class="link-effects">Гелерея</a>
+          <a href="#gallery" class="link-effects" aria-label="Переход в раздел Галерея">Галерея</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#catalogue" class="link-effects">Каталог</a>
+          <a href="#catalogue" class="link-effects" aria-label="Переход в раздел Каталог">Каталог</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#events" class="link-effects">События</a>
+          <a href="#events" class="link-effects" aria-label="Переход в раздел События">События</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#publishes" class="link-effects">Издания</a>
+          <a href="#publishes" class="link-effects" aria-label="Переход в раздел Издания">Издания</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#projects" class="link-effects">Проекты</a>
+          <a href="#projects" class="link-effects" aria-label="Переход в раздел Проекты">Проекты</a>
         </li>
         <li class="burger-menu__item">
-          <a href="#contacts" class="link-effects">Контакты</a>
+          <a href="#contacts" class="link-effects" aria-label="Переход в раздел Контакты">Контакты</a>
         </li>
       </ul>
-      <button class="btn-reset burger-menu__login btn-effects">
-        <svg class="login__img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <button class="btn-reset burger-menu__login btn-effects" aria-label="Переход на страницу входа">
+        <svg class="login-img" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
         </svg>
         <span>
@@ -373,7 +371,7 @@
         О&nbsp;нас
       </h2>
       <p class="section-description">
-        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения&nbsp;в производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов. В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
       </p>
     </div>
   </section>
@@ -384,40 +382,42 @@
           <h2 class="header-reset section-title gallery__title">
             Галерея
           </h2>
-          <label class="filter-label" for="gallery-select">Фильтр:</label>
-          <select class="gallery__select" name="gallery-select">
-            <option value="painting" selected>Живопись</option>
-            <option value="drawing">Рисунок</option>
-            <option value="sculpture">Скульптура</option>
-          </select>
+          <p class="filter-label">Фильтр:</p>
+          <div class="select-wrapper">
+            <select class="gallery__select" name="gallery-select" aria-label="Выбор направления искусства">
+              <option value="painting" selected>Живопись</option>
+              <option value="drawing">Рисунок</option>
+              <option value="sculpture">Скульптура</option>
+            </select>
+          </div>
         </div>
-        <ul class="list-reset gallery__ages flex">
+        <ul class="list-reset gallery__ages flex" aria-label="Выбор эпохи">
           <li class="gallery__age">
             <label class="age-label flex">
-              <input class="custom-radio" type="radio" id="xix" name="category" value="xix">
+              <input class="custom-radio" type="radio" id="xix" name="category" value="xix" aria-label="19 век">
               XIX век
               <span></span>
             </label>
           </li>
           <li class="gallery__age">
             <label class="age-label flex gallery__age-active">
-              <input class="custom-radio" type="radio" id="xx" name="category" value="xx" checked>
+              <input class="custom-radio" type="radio" id="xx" name="category" value="xx" checked aria-label="20 век">
               XX век
               <span></span>
             </label>
           </li>
           <li class="gallery__age">
             <label class="age-label flex">
-              <input class="custom-radio" type="radio" id="modern" name="category" value="modern">
+              <input class="custom-radio" type="radio" id="modern" name="category" value="modern" aria-label="Современность">
               Современность
               <span></span>
             </label>
           </li>
         </ul>
       </div>
-      <div class="swiper gallery__swiper">
+      <div class="swiper gallery__swiper" aria-label="Здесь вы можете ознакомиться с образцами произведений искусства">
         <div class="gallery__btns flex">
-          <button class="btn-reset gallery__btn gallery__prev-btn">
+          <button class="btn-reset gallery__btn gallery__prev-btn" aria-label="Перелистывание в начало">
             <svg class="nav-btn" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="nav-btn__body" d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#666666"/>
               <path class="nav-btn__border" d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="black"/>
@@ -425,7 +425,7 @@
             </svg>
           </button>
           <div class="gallery__pagination"></div>
-          <button class="btn-reset gallery__btn gallery__next-btn">
+          <button class="btn-reset gallery__btn gallery__next-btn" aria-label="Перелистывание в конец">
             <svg class="nav-btn" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path class="nav-btn__body" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#666666"/>
               <path class="nav-btn__border" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="black"/>
@@ -436,32 +436,32 @@
         <div class="swiper-wrapper gallery__wrapper">
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-1.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-1.png" alt="Торс" aria-label="Каземир Малевич - Торс">
             </picture>
           </div>
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-2.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-2.png" alt="Суперматизм" aria-label="Каземир Малевич - Суперматизм">
             </picture>
           </div>
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-3.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-3.png" alt="Крестьянка" aria-label="Каземир Малевич - Крестьянка">
             </picture>
           </div>
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-4.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-4.png" alt="Женщина с ведрами" aria-label="Казимир Малевич - Женщина с ведрами">
             </picture>
           </div>
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-5.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-5.png" alt="Жница" aria-label="Каземир Малевич - Жница">
             </picture>
           </div>
           <div class="swiper-slide gallery__slide">
             <picture>
-              <img class="gallery__img" src="img/gallery-6.png" alt="Картина">
+              <img class="gallery__img" src="img/gallery-6.png" alt="Суперматическая живопись" aria-label="Каземир Малевич - Суперматическая живопись">
             </picture>
           </div>
         </div>
