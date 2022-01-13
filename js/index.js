@@ -120,7 +120,17 @@ window.addEventListener('DOMContentLoaded', function() {
     })
   })
 
-//   var publishes_swiper = new Swiper('.publishes__swiper', {
+  document.querySelectorAll('.gallery__slide').forEach(function(imgBtn) {
+    imgBtn.addEventListener('click', function(event) {
+      document.querySelector('.modal').classList.add('modal_active');
+    })
+  })
+
+  document.querySelector('.modal__close').addEventListener('click', function() {
+    document.querySelector('.modal').classList.remove('modal_active');
+    })
+
+  //   var publishes_swiper = new Swiper('.publishes__swiper', {
 //     // Optional parameters
 //     slidesPerView: 3,
 //     spaceBetween: 50,
