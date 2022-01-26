@@ -1852,6 +1852,7 @@ img {
 
 .contacts__location {
   max-width: 256px;
+  margin-right: 5px;
 }
 
 .contacts__title {
@@ -1870,6 +1871,7 @@ img {
   align-items: flex-start;
   width: 57%;
   justify-content: space-between;
+  margin-right: 5px;
 }
 
 .callback__input {
@@ -1887,6 +1889,7 @@ img {
 .input-wrapper {
   flex-direction: column-reverse;
   width: 100%;
+  margin-right: 5px;
 }
 
 .callback__input:hover, .callback__input:focus {
@@ -2102,6 +2105,10 @@ img {
     padding-right: 34px;
   }
 
+  .callback__prompt {
+    display: none;
+  }
+
 }
 
 @media (max-width: 1200px) {
@@ -2303,12 +2310,14 @@ img {
   }
 
   .contacts__location {
+    margin: 0;
     margin-bottom: 30px;
   }
 
   .callback {
     width: 100%;
     justify-content: space-between;
+    margin: 0;
     margin-bottom: 30px;
   }
 
@@ -2324,6 +2333,10 @@ img {
 
   .social__title {
     font-weight: 600;
+  }
+
+  .callback__prompt {
+    display: inline;
   }
 
   /* Footer */
