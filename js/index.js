@@ -38,6 +38,11 @@ window.addEventListener('DOMContentLoaded', function() {
         el.classList.remove("genres-menu__button_active");
       });
     }
+    if (target.classList.contains('modal')) {
+      document.querySelector('.modal').classList.remove('modal_active');
+      $('body').css('overflow', 'auto');
+      $('body').css('margin-right', '');
+    }
   });
 
   document.querySelector(".search-open").addEventListener("click", function() {
@@ -89,7 +94,7 @@ window.addEventListener('DOMContentLoaded', function() {
         spaceBetween: 10,
       },
 
-      521: {
+      621: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 34,
@@ -118,12 +123,29 @@ window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.gallery__slide').forEach(function(imgBtn) {
     imgBtn.addEventListener('click', function(event) {
       document.querySelector('.modal').classList.add('modal_active');
+      var marginSize = window.innerWidth - document.getElementsByTagName('html')[0].clientWidth;
+      $('body').css('overflow', 'hidden');
+      $('body').css('margin-right', marginSize + 'px');
     })
   });
 
   document.querySelector('.modal__close').addEventListener('click', function() {
     document.querySelector('.modal').classList.remove('modal_active');
-    });
+    $('body').css('overflow', 'auto');
+    $('body').css('margin-right', '');
+  });
+
+  document.addEventListener("click", function(e) {
+    let target = e.target;
+    if (!target.closest(".genres-menu__items")) {
+      document.querySelectorAll(".submenu").forEach(el => {
+          el.classList.remove("submenu-active");
+      })
+      document.querySelectorAll(".genres-menu__button").forEach(el => {
+        el.classList.remove("genres-menu__button_active");
+      });
+    }
+  });
 
   document.querySelectorAll('.painter__button').forEach(function(tabsBtn) {
     tabsBtn.addEventListener('click', function(event) {
@@ -137,7 +159,7 @@ window.addEventListener('DOMContentLoaded', function() {
       })
         document.querySelectorAll(`[data-detail="${painter}"]`).forEach(function(activeElement) {
           activeElement.classList.add('painter-detail_active')
-          if ($(window).width() < 621){
+          if ($(window).width() < 766) {
             activeElement.scrollIntoView({behavior: "smooth"})
           }
         })
@@ -194,14 +216,13 @@ window.addEventListener('DOMContentLoaded', function() {
     // Optional parameters
     slidesPerView: 3,
     spaceBetween: 50,
-    loop: true,
 
     breakpoints: {
       320: {
         slidesPerView: 1,
       },
 
-      621: {
+      451: {
         slidesPerView: 2,
         spaceBetween: 34,
       },
@@ -253,11 +274,16 @@ window.addEventListener('DOMContentLoaded', function() {
       });
 
       myMap.geoObjects.add(myPlacemark);
+      myMap.behaviors.disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom'])
     };
 
   var selector = document.querySelector("input[type='tel']");
   var im = new Inputmask("+7 (999) 999-99-99");
   im.mask(selector);
+
+  var data_js = {
+    "access_token": "tzrs7d0qy6qopus2y4nsvqm3"
+  };
 
   new JustValidate('.callback', {
     rules: {
@@ -284,76 +310,37 @@ window.addEventListener('DOMContentLoaded', function() {
         required: 'Данное поле обязательно к заполнению!',
       },
     },
-  });
+    submitHandler: function(form) {
+      // let formData = new FormData(form);
 
-  var submitButton = document.querySelector(".callback__btn");
-  var form = document.querySelector(".callback");
-  form.addEventListener("submit", function (e) {
-      setTimeout(function() {
-          submitButton.value = "Sending...";
-          submitButton.disabled = true;
-      }, 1);
-  });
+      var request = new XMLHttpRequest();
 
-  var form_class_js = ".callback";
+      request.onreadystatechange = function() {
+        if (request.readyState == 4 && request.status == 200) {
+            console.log('Письмо успешно отправлено');
+            document.querySelector('.callback__submit').classList.add('callback__submit-active')
+        }
+      };
 
-  var data_js = {
-      "access_token": "tzrs7d0qy6qopus2y4nsvqm3"
-  };
+      var contactName = document.querySelector("input[name='name']").value;
+      var contactPhone = document.querySelector("input[name='phone']").value;
+      data_js['subject'] = "Новый контакт";
+      data_js['text'] = "Имя: " + contactName + '. Номер телефона: ' + contactPhone;
 
-  function js_onSuccess() {
-    // remove this to avoid redirect
-    window.location = window.location.pathname + "?message=Email+Successfully+Sent%21&isError=0";
-  }
+      request.open('POST', "https://postmail.invotes.com/send", true);
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-  function js_onError(error) {
-    // remove this to avoid redirect
-    window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-  }
-
-  var sendButton = document.querySelector(".callback__btn");
-
-    function js_send() {
-        sendButton.value='Sending…';
-        sendButton.disabled=true;
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function() {
-            if (request.readyState == 4 && request.status == 200) {
-                js_onSuccess();
-            } else
-            if(request.readyState == 4) {
-                js_onError(request.response);
-            }
-        };
-
-        var subject = document.querySelector(form_class_js + " [name='name']").value;
-        var message = document.querySelector(form_class_js + " [name='phone']").value;
-        data_js['subject'] = subject;
-        data_js['text'] = message;
-        var params = toParams(data_js);
-
-        request.open("POST", "https://postmail.invotes.com/send", true);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        request.send(params);
-
-        return false;
-    }
-
-    sendButton.onclick = js_send;
-
-    function toParams(data_js) {
-        var form_data = [];
+      var form_data = [];
         for ( var key in data_js ) {
             form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
         }
 
-        return form_data.join("&");
-    }
+      var params = form_data.join("&")
 
-    var js_form = document.getElementById(form_id_js);
-    js_form.addEventListener("submit", function (e) {
-        e.preventDefault();
-    });
+      request.send(params);
+
+      form.reset();
+    }
+  });
 
 })
