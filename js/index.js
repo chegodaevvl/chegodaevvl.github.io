@@ -38,6 +38,9 @@ window.addEventListener('DOMContentLoaded', function() {
         el.classList.remove("genres-menu__button_active");
       });
     }
+    if (!target.closest(".search") && (!target.closest(".search-open"))) {
+      document.querySelector(".search").classList.remove("search_active");
+    }
     if (target.classList.contains('modal')) {
       document.querySelector('.modal').classList.remove('modal_active');
       $('body').css('overflow', 'auto');
