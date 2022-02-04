@@ -55,6 +55,7 @@ body {
   --active-color: #7943A4;
   --btn-color: #9D5CD0;
   --light-btn-color: #D1A9F0;
+  --alert-color: #D11616;
 }
 
 a {
@@ -1802,15 +1803,16 @@ p {
 /* Contacts */
 
 .contacts__container {
-  flex-direction: column;
+  border: 1px solid #CACACA;
 }
 
 .contacts__description {
+  margin: 0 auto;
   width: 100%;
+  max-width: 1920px;
   padding: 38px 160px;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #CACACA;
   color: var(--main-text-color);
 }
 
@@ -1853,7 +1855,7 @@ p {
 }
 
 .input-wrapper {
-  flex-direction: column-reverse;
+  position: relative;
   width: 100%;
   margin-right: 5px;
 }
@@ -1884,6 +1886,20 @@ p {
 
 .callback__submit-active {
   display: block;
+}
+
+.js-validate-error-field {
+  border-color: var(--alert-color);
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -16px;
+  left: 25px;
+  color: var(--alert-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .social__title {
@@ -1942,10 +1958,15 @@ p {
 /* Footer */
 
 .footer {
+  background-color: #000;
+}
+
+.footer__container {
+  margin: 0 auto;
+  max-width: 1920px;
   padding: 48px 160px;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
 }
 
 .footer__logo img {
@@ -2106,7 +2127,7 @@ p {
     padding-right: 50px;
   }
 
-  .footer {
+  .footer__container {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -2401,7 +2422,7 @@ p {
 
   /* Footer */
 
-  .footer {
+  .footer__container {
     padding: 40px 50px;
   }
 
@@ -2769,6 +2790,7 @@ p {
   .burger-menu {
     padding-left: 15px;
     padding-bottom: 27px;
+    height: 600px;
   }
 
   .burger-menu__title {
@@ -2805,7 +2827,6 @@ p {
   .hero__container {
     padding-top: 32px;
     padding-bottom: 45px;
-    min-height: calc(355px - 45px);
   }
 
   .hero__text {
@@ -2815,7 +2836,7 @@ p {
   }
 
   .hero__title {
-    font-size: 32px;
+    font-size: 48px;
     text-align: center;
     margin-bottom: 13px;
   }
@@ -2823,8 +2844,8 @@ p {
   .hero__description {
     max-width: calc(100% - 25px);
     font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 30px;
     text-align: center;
     margin-bottom: 40px;
   }
@@ -3046,6 +3067,10 @@ p {
     height: 65px;
   }
 
+  .partners__img {
+    width: auto;
+  }
+
   .freelands {
     padding: 19px 45px;
   }
@@ -3158,7 +3183,7 @@ p {
 
   /* Footer */
 
-  .footer {
+  .footer__container {
     padding: 20px 55px;
     flex-direction: column-reverse;
     align-items: center;
@@ -3206,16 +3231,13 @@ p {
 
 @media (max-width: 450px) {
 
-  .partners__img {
-    width: auto;
+  .hero__title {
+    font-size: 32px;
   }
 
-}
-
-@media (max-width: 320px) and (max-height: 600px) {
-
-  .burger-menu {
-    height: 600px;
+  .hero__description {
+    font-size: 12px;
+    line-height: 16px;
   }
 
 }

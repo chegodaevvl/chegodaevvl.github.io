@@ -305,12 +305,12 @@ window.addEventListener('DOMContentLoaded', function() {
     },
     messages: {
       name: {
-        required: 'Данное поле обязательно к заполнению!',
+        required: 'Введите ваше имя',
         minLength: 'Имя пользователя должно содержать минимум 2 символа!',
         maxLength: 'Имя пользователя не должно превышать 150 символов!'
       },
       tel: {
-        required: 'Данное поле обязательно к заполнению!',
+        required: 'Введите номер телефона',
       },
     },
     submitHandler: function(form) {
