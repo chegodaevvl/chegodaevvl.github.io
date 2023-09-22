@@ -20,4 +20,5 @@
 * Just Validate
 
 Ссылка на макет: https://www.figma.com/file/FXCdg8Pu72IM1Zs2NV6iwJ/Blanchard?type=design&node-id=0-1&mode=design&t=5X628SKJnu9XYPKo-0
+
 Ссылка на лендинг: https://chegodaevvl.github.io
